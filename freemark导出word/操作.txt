@@ -20,7 +20,7 @@
 	缺陷：每次生成的word文档在打开时都要选择文件转换方式 选择为XML
 	操作：
 		--》获取到freemark中的Template模板类和Configuration类
-		--》configuration指定模板路径
+		--》configuration指定模板路径  【该案例中文件存放路径为：/projectName/src/main/java/com/future/template/lhb1.ftl】
 				config = new Configuration();
 				config.setEncoding(Locale.getDefault(),"UTF-8");
 				config.setDefaultEncoding("UTF-8");
