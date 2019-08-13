@@ -1,0 +1,31 @@
+1、添加依赖  或 添加jar包
+	<dependency>
+		<groupId>org.freemarker</groupId>
+		<artifactId>freemarker</artifactId>
+		<version>2.3.22</version>
+	</dependency>
+	
+2、根据word得到ftl模板
+	注意：doc与docx后缀文档中，docx是doc的升级 ，只要能打开docx的word都可将其名称调整为doc后缀进行打开。
+			故 导出文件的后缀一般为doc
+	操作：
+		--》创建word，对于需要动态替换的信息使用${key}的方式进行替换
+		--》导出/另存为 ：word 2003 xml 【得到模板xml文件】
+		--》使用xml编辑文件将其打开并格式化【可以使用foxechs.exe软件】，查看对应的${}是否被拆分开 若被拆分开  直接删除中间多余部分 将其调整成正确的${}模式，文件保存并修改后缀名为ftl
+		
+		--》若存在表格则需要使用<#list userList as user> ${user.name}</#list>的方式进行遍历
+	
+3、将ftl模板复制到项目的java路径下 或者Resource路径下，进行文件的读取。
+	逻辑：给当前项目的中根据默认名称和动态数据生成一个文件，该文件即为动态生成的文件。然后将该文件进行读取进行前端响应进行下载操作。
+	缺陷：每次生成的word文档在打开时都要选择文件转换方式 选择为XML
+	操作：
+		--》获取到freemark中的Template模板类和Configuration类
+		--》configuration指定模板路径
+				config = new Configuration();
+				config.setEncoding(Locale.getDefault(),"UTF-8");
+				config.setDefaultEncoding("UTF-8");
+				// 设置异常处理器,这样的话就可以${a.b.c.d}即使没有属性也不会出错
+				config.setTemplateExceptionHandler(TemplateExceptionHandler.IGNORE_HANDLER);
+				config.setClassForTemplateLoading(this.getClass(), "/com/future/template");
+				
+		--》其他步骤查看java.txt即可
