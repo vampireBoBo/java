@@ -39,7 +39,8 @@
 			//Writer out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outFile),"UTF-8"), 10240);
 			Map<String,Object> params = new HashMap<>();
 			params.put("userList", dataList);
-			 t.process(params, out);
+			params.put("message","测试该字段的非必要行");
+			t.process(params, out);
 			out.close();
 			
 			// 响应前端 文件下载
@@ -66,3 +67,4 @@
 		}
 				
 	}
+	

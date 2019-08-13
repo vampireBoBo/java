@@ -7,15 +7,15 @@
 <o:LastAuthor>Administrator</o:LastAuthor>
 <o:Revision>2</o:Revision>
 <o:TotalTime>0</o:TotalTime>
-<o:Created>2019-08-13T05:30:00Z</o:Created>
-<o:LastSaved>2019-08-13T05:30:00Z</o:LastSaved>
+<o:Created>2019-08-13T06:43:00Z</o:Created>
+<o:LastSaved>2019-08-13T06:43:00Z</o:LastSaved>
 <o:Pages>1</o:Pages>
-<o:Words>2</o:Words>
-<o:Characters>18</o:Characters>
+<o:Words>9</o:Words>
+<o:Characters>56</o:Characters>
 <o:Company>Home</o:Company>
 <o:Lines>1</o:Lines>
 <o:Paragraphs>1</o:Paragraphs>
-<o:CharactersWithSpaces>19</o:CharactersWithSpaces>
+<o:CharactersWithSpaces>64</o:CharactersWithSpaces>
 <o:Version>15</o:Version>
 </o:DocumentProperties>
 <w:fonts>
@@ -2577,14 +2577,14 @@
 </w:hdrShapeDefaults>
 <w:footnotePr>
 <w:footnote w:type="separator">
-<w:p wsp:rsidR="00FF3558" wsp:rsidRDefault="00FF3558" wsp:rsidP="000A0B09">
+<w:p wsp:rsidR="00A81A5E" wsp:rsidRDefault="00A81A5E" wsp:rsidP="000A0B09">
 <w:r>
 <w:separator/>
 </w:r>
 </w:p>
 </w:footnote>
 <w:footnote w:type="continuation-separator">
-<w:p wsp:rsidR="00FF3558" wsp:rsidRDefault="00FF3558" wsp:rsidP="000A0B09">
+<w:p wsp:rsidR="00A81A5E" wsp:rsidRDefault="00A81A5E" wsp:rsidP="000A0B09">
 <w:r>
 <w:continuationSeparator/>
 </w:r>
@@ -2593,14 +2593,14 @@
 </w:footnotePr>
 <w:endnotePr>
 <w:endnote w:type="separator">
-<w:p wsp:rsidR="00FF3558" wsp:rsidRDefault="00FF3558" wsp:rsidP="000A0B09">
+<w:p wsp:rsidR="00A81A5E" wsp:rsidRDefault="00A81A5E" wsp:rsidP="000A0B09">
 <w:r>
 <w:separator/>
 </w:r>
 </w:p>
 </w:endnote>
 <w:endnote w:type="continuation-separator">
-<w:p wsp:rsidR="00FF3558" wsp:rsidRDefault="00FF3558" wsp:rsidP="000A0B09">
+<w:p wsp:rsidR="00A81A5E" wsp:rsidRDefault="00A81A5E" wsp:rsidP="000A0B09">
 <w:r>
 <w:continuationSeparator/>
 </w:r>
@@ -2622,7 +2622,7 @@
 <w:useFELayout/>
 </w:compat>
 <wsp:rsids>
-<wsp:rsidRoot wsp:val="0025122C"/>
+<wsp:rsidRoot wsp:val="00FC2522"/>
 <wsp:rsid wsp:val="000007FB"/>
 <wsp:rsid wsp:val="00001BC7"/>
 <wsp:rsid wsp:val="000030B4"/>
@@ -3131,6 +3131,7 @@
 <wsp:rsid wsp:val="001D7010"/>
 <wsp:rsid wsp:val="001D7030"/>
 <wsp:rsid wsp:val="001D71B0"/>
+<wsp:rsid wsp:val="001E0C77"/>
 <wsp:rsid wsp:val="001E1203"/>
 <wsp:rsid wsp:val="001E135E"/>
 <wsp:rsid wsp:val="001E2B43"/>
@@ -3259,7 +3260,6 @@
 <wsp:rsid wsp:val="002469C8"/>
 <wsp:rsid wsp:val="00246AE3"/>
 <wsp:rsid wsp:val="00250D06"/>
-<wsp:rsid wsp:val="0025122C"/>
 <wsp:rsid wsp:val="002512BF"/>
 <wsp:rsid wsp:val="00251336"/>
 <wsp:rsid wsp:val="00251C39"/>
@@ -5436,6 +5436,7 @@
 <wsp:rsid wsp:val="00A81391"/>
 <wsp:rsid wsp:val="00A814C9"/>
 <wsp:rsid wsp:val="00A819D2"/>
+<wsp:rsid wsp:val="00A81A5E"/>
 <wsp:rsid wsp:val="00A81EEE"/>
 <wsp:rsid wsp:val="00A82518"/>
 <wsp:rsid wsp:val="00A840D6"/>
@@ -5456,7 +5457,6 @@
 <wsp:rsid wsp:val="00A9398C"/>
 <wsp:rsid wsp:val="00A93F61"/>
 <wsp:rsid wsp:val="00A94E7B"/>
-<wsp:rsid wsp:val="00A9574D"/>
 <wsp:rsid wsp:val="00A95B62"/>
 <wsp:rsid wsp:val="00A95BEC"/>
 <wsp:rsid wsp:val="00AA03D4"/>
@@ -5655,6 +5655,7 @@
 <wsp:rsid wsp:val="00B5066D"/>
 <wsp:rsid wsp:val="00B508AF"/>
 <wsp:rsid wsp:val="00B511BC"/>
+<wsp:rsid wsp:val="00B51305"/>
 <wsp:rsid wsp:val="00B51AC8"/>
 <wsp:rsid wsp:val="00B51B1B"/>
 <wsp:rsid wsp:val="00B52AC1"/>
@@ -5936,6 +5937,7 @@
 <wsp:rsid wsp:val="00C51C5C"/>
 <wsp:rsid wsp:val="00C5237A"/>
 <wsp:rsid wsp:val="00C525FD"/>
+<wsp:rsid wsp:val="00C528BD"/>
 <wsp:rsid wsp:val="00C5372E"/>
 <wsp:rsid wsp:val="00C5375B"/>
 <wsp:rsid wsp:val="00C53CEC"/>
@@ -6067,6 +6069,7 @@
 <wsp:rsid wsp:val="00CC56FD"/>
 <wsp:rsid wsp:val="00CC5995"/>
 <wsp:rsid wsp:val="00CC62FC"/>
+<wsp:rsid wsp:val="00CC6BED"/>
 <wsp:rsid wsp:val="00CC6BFA"/>
 <wsp:rsid wsp:val="00CC70FE"/>
 <wsp:rsid wsp:val="00CC7C5D"/>
@@ -6836,6 +6839,7 @@
 <wsp:rsid wsp:val="00F96AD5"/>
 <wsp:rsid wsp:val="00F96B10"/>
 <wsp:rsid wsp:val="00F96BD0"/>
+<wsp:rsid wsp:val="00F975C6"/>
 <wsp:rsid wsp:val="00F97D72"/>
 <wsp:rsid wsp:val="00F97D86"/>
 <wsp:rsid wsp:val="00FA03E8"/>
@@ -6885,6 +6889,7 @@
 <wsp:rsid wsp:val="00FC1DE5"/>
 <wsp:rsid wsp:val="00FC1E9E"/>
 <wsp:rsid wsp:val="00FC2322"/>
+<wsp:rsid wsp:val="00FC2522"/>
 <wsp:rsid wsp:val="00FC2EC7"/>
 <wsp:rsid wsp:val="00FC35AE"/>
 <wsp:rsid wsp:val="00FC3C4C"/>
@@ -6895,7 +6900,6 @@
 <wsp:rsid wsp:val="00FC5A7F"/>
 <wsp:rsid wsp:val="00FC6008"/>
 <wsp:rsid wsp:val="00FC6155"/>
-<wsp:rsid wsp:val="00FC61C6"/>
 <wsp:rsid wsp:val="00FC6E04"/>
 <wsp:rsid wsp:val="00FC77FC"/>
 <wsp:rsid wsp:val="00FD028F"/>
@@ -6947,7 +6951,6 @@
 <wsp:rsid wsp:val="00FF182D"/>
 <wsp:rsid wsp:val="00FF2659"/>
 <wsp:rsid wsp:val="00FF26C8"/>
-<wsp:rsid wsp:val="00FF3558"/>
 <wsp:rsid wsp:val="00FF37C2"/>
 <wsp:rsid wsp:val="00FF3A8D"/>
 <wsp:rsid wsp:val="00FF469B"/>
@@ -6969,28 +6972,194 @@
 </w:docPr>
 <w:body>
 <wx:sect>
-<w:p wsp:rsidR="00FC61C6" wsp:rsidRDefault="0025122C" wsp:rsidP="00FC61C6">
+<w:tbl>
+<w:tblPr>
+<w:tblW w:w="0" w:type="auto"/>
+<w:tblBorders>
+<w:top w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="000000"/>
+<w:left w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="000000"/>
+<w:bottom w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="000000"/>
+<w:right w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="000000"/>
+<w:insideH w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="000000"/>
+<w:insideV w:val="single" w:sz="4" wx:bdrwidth="10" w:space="0" w:color="000000"/>
+</w:tblBorders>
+<w:tblLook w:val="04A0"/>
+</w:tblPr>
+<w:tblGrid>
+<w:gridCol w:w="1644"/>
+<w:gridCol w:w="1665"/>
+<w:gridCol w:w="1655"/>
+<w:gridCol w:w="1655"/>
+<w:gridCol w:w="1677"/>
+</w:tblGrid>
+<w:tr wsp:rsidR="00B51305" wsp:rsidTr="00CC6BED">
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1704" w:type="dxa"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+</w:tcPr>
+<w:p wsp:rsidR="00FC2522" wsp:rsidRPr="00CC6BED" wsp:rsidRDefault="00FC2522" wsp:rsidP="00CC6BED">
 <w:pPr>
 <w:pStyle w:val="a6"/>
-<w:ind w:first-line="560"/>
+<w:ind w:first-line-chars="0" w:first-line="0"/>
 </w:pPr>
-<w:r>
-<w:rPr>
-<w:rFonts w:hint="fareast"/>
-</w:rPr>
-<w:t>${titleName}</w:t>
+<w:r wsp:rsidRPr="00CC6BED">
+<w:t>工号</w:t>
 </w:r>
 </w:p>
-<w:p wsp:rsidR="005C246F" wsp:rsidRPr="005633DA" wsp:rsidRDefault="0025122C" wsp:rsidP="00FC61C6">
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1704" w:type="dxa"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+</w:tcPr>
+<w:p wsp:rsidR="00FC2522" wsp:rsidRPr="00CC6BED" wsp:rsidRDefault="00FC2522" wsp:rsidP="00CC6BED">
+<w:pPr>
+<w:pStyle w:val="a6"/>
+<w:ind w:first-line-chars="0" w:first-line="0"/>
+</w:pPr>
+<w:r wsp:rsidRPr="00CC6BED">
+<w:t>姓名</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1704" w:type="dxa"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+</w:tcPr>
+<w:p wsp:rsidR="00FC2522" wsp:rsidRPr="00CC6BED" wsp:rsidRDefault="00FC2522" wsp:rsidP="00CC6BED">
+<w:pPr>
+<w:pStyle w:val="a6"/>
+<w:ind w:first-line-chars="0" w:first-line="0"/>
+</w:pPr>
+<w:r wsp:rsidRPr="00CC6BED">
+<w:t>性别</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1705" w:type="dxa"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+</w:tcPr>
+<w:p wsp:rsidR="00FC2522" wsp:rsidRPr="00CC6BED" wsp:rsidRDefault="00FC2522" wsp:rsidP="00CC6BED">
+<w:pPr>
+<w:pStyle w:val="a6"/>
+<w:ind w:first-line-chars="0" w:first-line="0"/>
+</w:pPr>
+<w:r wsp:rsidRPr="00CC6BED">
+<w:t>年龄</w:t>
+</w:r>
+</w:p>
+</w:tc>
+<w:tc>
+<w:tcPr>
+<w:tcW w:w="1705" w:type="dxa"/>
+<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+</w:tcPr>
+<w:p wsp:rsidR="00FC2522" wsp:rsidRPr="00CC6BED" wsp:rsidRDefault="00FC2522" wsp:rsidP="00CC6BED">
+<w:pPr>
+<w:pStyle w:val="a6"/>
+<w:ind w:first-line-chars="0" w:first-line="0"/>
+</w:pPr>
+<w:r wsp:rsidRPr="00CC6BED">
+<w:t>电话</w:t>
+</w:r>
+</w:p>
+</w:tc>
+</w:tr>
+
+	<#list userList as user>
+		<w:tr wsp:rsidR="00B51305" wsp:rsidTr="00CC6BED">
+			<w:tc>
+			<w:tcPr>
+			<w:tcW w:w="1704" w:type="dxa"/>
+			<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+			</w:tcPr>
+			<w:p wsp:rsidR="00FC2522" wsp:rsidRPr="00CC6BED" wsp:rsidRDefault="00B51305" wsp:rsidP="00CC6BED">
+			<w:pPr>
+			<w:pStyle w:val="a6"/>
+			<w:ind w:first-line-chars="0" w:first-line="0"/>
+			</w:pPr>
+			<w:r wsp:rsidRPr="00CC6BED">
+			<w:t>${user.no}</w:t>
+			</w:r>
+			</w:p>
+			</w:tc>
+			<w:tc>
+			<w:tcPr>
+			<w:tcW w:w="1704" w:type="dxa"/>
+			<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+			</w:tcPr>
+			<w:p wsp:rsidR="00FC2522" wsp:rsidRPr="00CC6BED" wsp:rsidRDefault="00B51305" wsp:rsidP="00CC6BED">
+			<w:pPr>
+			<w:pStyle w:val="a6"/>
+			<w:ind w:first-line-chars="0" w:first-line="0"/>
+			</w:pPr>
+			<w:r wsp:rsidRPr="00CC6BED">
+			<w:t>${user.name}</w:t>
+			</w:r>
+			</w:p>
+			</w:tc>
+			<w:tc>
+			<w:tcPr>
+			<w:tcW w:w="1704" w:type="dxa"/>
+			<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+			</w:tcPr>
+			<w:p wsp:rsidR="00FC2522" wsp:rsidRPr="00CC6BED" wsp:rsidRDefault="00B51305" wsp:rsidP="00CC6BED">
+			<w:pPr>
+			<w:pStyle w:val="a6"/>
+			<w:ind w:first-line-chars="0" w:first-line="0"/>
+			</w:pPr>
+			<w:r wsp:rsidRPr="00CC6BED">
+			<w:t>${user.sex}</w:t>
+			</w:r>
+			</w:p>
+			</w:tc>
+			<w:tc>
+			<w:tcPr>
+			<w:tcW w:w="1705" w:type="dxa"/>
+			<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+			</w:tcPr>
+			<w:p wsp:rsidR="00FC2522" wsp:rsidRPr="00CC6BED" wsp:rsidRDefault="00B51305" wsp:rsidP="00CC6BED">
+			<w:pPr>
+			<w:pStyle w:val="a6"/>
+			<w:ind w:first-line-chars="0" w:first-line="0"/>
+			</w:pPr>
+			<w:r wsp:rsidRPr="00CC6BED">
+			<w:t>${user.age}</w:t>
+			</w:r>
+			</w:p>
+			</w:tc>
+			<w:tc>
+			<w:tcPr>
+			<w:tcW w:w="1705" w:type="dxa"/>
+			<w:shd w:val="clear" w:color="auto" w:fill="auto"/>
+			</w:tcPr>
+			<w:p wsp:rsidR="00FC2522" wsp:rsidRPr="00CC6BED" wsp:rsidRDefault="00B51305" wsp:rsidP="00CC6BED">
+			<w:pPr>
+			<w:pStyle w:val="a6"/>
+			<w:ind w:first-line-chars="0" w:first-line="0"/>
+			</w:pPr>
+			<w:r wsp:rsidRPr="00CC6BED">
+			<w:t>${user.phone}</w:t>
+			</w:r>
+			</w:p>
+			</w:tc>
+		</w:tr>
+	</#list>
+</w:tbl>
+<w:p wsp:rsidR="005C246F" wsp:rsidRPr="005633DA" wsp:rsidRDefault="00B51305" wsp:rsidP="00544A43">
 <w:pPr>
 <w:pStyle w:val="a6"/>
 <w:ind w:first-line="560"/>
+</w:pPr>
+<w:r>
 <w:rPr>
 <w:rFonts w:hint="fareast"/>
 </w:rPr>
-</w:pPr>
-<w:r>
-<w:t>${age}</w:t>
+	<w:t><#if message??>${message}</#if></w:t>
 </w:r>
 </w:p>
 <w:sectPr wsp:rsidR="005C246F" wsp:rsidRPr="005633DA" wsp:rsidSect="00522DF3">

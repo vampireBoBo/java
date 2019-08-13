@@ -29,3 +29,7 @@
 				config.setClassForTemplateLoading(this.getClass(), "/com/future/template");
 				
 		--》其他步骤查看java.txt即可
+		
+4、freemarker 语句
+	<#list> ==> list循环
+	<#if>   ==>  if判断  【<#if message??>${message}</#if>===》判断是否为空 若不为空  就行展示 若不加if判断  word可以正常导出 但是java的控制台会提示该字段没有赋值，故添加该if判断取消报错提示】
