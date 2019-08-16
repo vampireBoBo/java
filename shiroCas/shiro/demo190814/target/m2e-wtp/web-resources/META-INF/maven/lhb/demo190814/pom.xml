@@ -21,7 +21,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.9</version>
+      <version>4.12</version>
       <scope>test</scope>
     </dependency>
     
@@ -131,6 +131,19 @@
 	    <version>3.4.2</version>
 	</dependency>
     <!-- 日志 end -->
+    
+    <!-- mail start -->
+    <dependency >
+        <groupId >javax.mail </groupId >
+        <artifactId >mail </artifactId >
+        <version >1.4.5 </version >
+    </dependency >
+    <dependency >
+        <groupId >com.sun.mail </groupId >
+        <artifactId >javax.mail </artifactId >
+        <version >1.5.4 </version >
+    </dependency >
+     <!-- mail end -->
   </dependencies>
   <build>
     <finalName>demo190814</finalName>
