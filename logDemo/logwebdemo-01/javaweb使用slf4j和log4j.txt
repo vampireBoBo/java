@@ -1,0 +1,30 @@
+背景：
+	slf4j（日志接口类）
+	log4j（日志实现类）  
+  	slf4j-log4j12（slf4j到log4j的桥接器）
+  	
+ 	项目：java web项目   slf4j+log4j
+
+注意事项：
+	1、添加lib从通过点击指定的lib下的jar将其添加到运行环境中
+	2、若没有log4j。properties的配置文件，则会抛出log4j:WARN No appenders could be found for logger 异常。 	
+	3、创建名称为log4j.properties的配置文件，并将其存放在src的根目录下。因为log4j默认会从该位置去读取其配置文件。
+	4、servlet路径配置：当前servlet添加@WebServlet ，若同时在web.xml配置该servlet的url路径时 若两条路径不相同  则都可生效，若相同 则会抛出异常，然后去掉其中一个即可 
+	5、web.xml中的classpath：表示从仅从WEB-INF/classes下开始查找对应的配置文件
+				  classpath*:表从WEB-INF/classes和WEB-INF/lib下查找对应文件
+	  若不配置classpath，则路径要从/WEB-INF/下的对应路径一一配置
+	6、servlet生命周期
+		xml中配置了该servlt的load-on-starup参数
+			1》当配置了该参数值大于等于0 的值时，该servlet在web容器初始化时进行初始化
+			2》当多个servlet都配置了该参数时，则值越小级别越高越先执行。
+			3》若该参数为负数或者不配置的时候，该servlet的init方法只有在被访问对应的url时才进行初始化的创建操作。
+		servlet的init destory都只执行一次  service方法在生命周期内可以多次执行
+
+使用：
+	背景：配置文件为规定的存放位置与规定的名称---存放在src根目录下的log4j.properties 
+	1.在src根目录下创建log4j.properties的文件
+	2.在指定的接口中掉用日志打印方法
+	
+	背景：配置文件为规定的存放位置与规定的名称---存放在src根目录下的log4j.properties  此时在web.xml 需要指定log的配置文件路径并配置对应的监听类或者servlet类去手动配置log4j的配置文件
+	1、配置对应的文件路径【此处只是在web容器的servletContext中添加上下文参数】
+	2、配置web容器初始化时初始化配置log4j配置的log4jservlet,重写里面的init方法 并在xml设置该servlet为初始化加载load-on-startup=0

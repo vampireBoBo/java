@@ -1,0 +1,74 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="{namespace} {location}"
+         xsi:noNamespaceSchemaLocation="{location}" 
+         xmlns="default namespace">
+  <display-name>Archetype Created Web Application</display-name>
+  
+  <!-- log4j 设置配置文件的位置  并设置对那个的监听 用于设置配置文件的加载-->
+  <context-param>
+  	<param-name>log4jConfigLocation</param-name>
+  	<param-value>classpath:properties/log4j.properties</param-value>
+  </context-param>
+  <listener>
+  	<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+  </listener>
+  
+  <!-- spring application 配置 -->
+  <context-param>
+  	<param-value>contextConfigLocation</param-value>
+  	<param-value>classpath:spring/application.xml</param-value>
+  </context-param>
+  <listener>
+  	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  
+  <!-- springMVC -->
+  <servlet>
+    <servlet-name>appServlet</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath:spring-mvc.xml</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+    <async-supported>true</async-supported>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>appServlet</servlet-name>
+    <url-pattern>/spring/*</url-pattern>
+  </servlet-mapping>
+  
+  
+  <!-- 定期清理堆栈信息 防止内存溢出 -->
+  <listener>
+    <listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+  </listener>
+  
+  <!-- 配置webroot app  防止同个tomcat下部署多个webx项目时无法准确定位该项目的文件路径 -->
+  <context-param>
+		<param-name>webAppRootKey</param-name>
+		<param-value>logmavenssmdemo-01.root</param-value>
+  </context-param>
+  
+  <!-- 乱码过滤器  -->
+  <filter>
+    <filter-name>encodingFilter</filter-name>
+    <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+    <init-param>
+      <param-name>forceEncoding</param-name>
+      <param-value>true</param-value>
+    </init-param>
+  </filter> 
+  <filter-mapping>
+    <filter-name>encodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+</web-app>
