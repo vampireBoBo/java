@@ -1,8 +1,5 @@
 package com.lhb.controller;
 
-import java.io.PrintWriter;
-
-
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.logging.log4j.LogManager;
@@ -22,7 +19,7 @@ public class IndexController {
 	 * @return  返回结果值
 	 */
 	@ResponseBody
-	@GetMapping(value="/login")
+	@GetMapping(value="/index")
 	public String login(HttpServletResponse rep){
 		log.error("==controller层的日志信息==");
 		log.info("==controller层的日志信息==");

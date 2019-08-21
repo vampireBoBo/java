@@ -16,6 +16,9 @@
 		<!-- 控制台输出 -->
         <console name="Console" target="SYSTEM_OUT">
             <PatternLayout pattern="[%d{HH:mm:ss:SSS}] [%p] - %l - %m%n"/>
+            <Filters>
+                <ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
         </console>
         <!--SMTP :邮件发送日志  注意：smtpPassword不是邮箱密码 而是邮箱p0p3的授权码  授权码有效期好像是30天 -->
       <!--   <SMTP name="Mail" subject="lhbTest-log-qqmial" to="1579404542@qq.com" 
@@ -48,7 +51,7 @@
          <root level="all">
              <appender-ref ref="Console"/>
             <!--  <appender-ref ref="Mail"/> -->
-             <appender-ref ref="RollingInfoFile"/>
+             <!-- <appender-ref ref="RollingInfoFile"/> -->
          </root>
      </loggers>
  </configuration>

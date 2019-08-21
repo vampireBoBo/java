@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd" >
 <html>
 <head>
-	<title>首页</title>
+	<title>无权限页面</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, 
                                      initial-scale=1.0, 
@@ -19,7 +19,7 @@
 <body>
 	<h2>Hello World!</h2>
 	<div class="container">
-		<h2>欢迎 LHB </h2>
+		<h2>温馨提示：权限不足，请核实。</h2>
 	</div>
 </body>
 </html>

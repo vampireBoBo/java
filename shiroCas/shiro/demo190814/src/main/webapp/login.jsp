@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd" >
 <html>
 <head>
-	<title>首页</title>
+	<title>登录页面</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, 
                                      initial-scale=1.0, 
@@ -19,7 +19,31 @@
 <body>
 	<h2>Hello World!</h2>
 	<div class="container">
-		<h2>欢迎 LHB </h2>
+		<center>
+			<form class="form-horizontal" role="form" action="<%=request.getContextPath()%>/spring/login">
+				<div class="row">
+					<div class="form-group">
+						<label class="col-lg-2 control-label">账号</label>
+						<div class="col-lg-10">
+							<input class="form-control" name="username">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group">
+						<label class="col-lg-2 control-label">密码</label>
+						<div class="col-lg-10">
+							<input class="form-control" name="password">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-group">
+						<button type="submit">登录</button>
+					</div>
+				</div>
+			</form>
+		</center>
 	</div>
 </body>
 </html>

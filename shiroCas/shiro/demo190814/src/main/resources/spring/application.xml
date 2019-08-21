@@ -21,4 +21,6 @@
 		<!-- 排除视图层所在的包  视图层交由springmvc进行扫描 -->
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
 	</context:component-scan>	
+	
+	<import resource="shiro.xml"/>
 </beans>

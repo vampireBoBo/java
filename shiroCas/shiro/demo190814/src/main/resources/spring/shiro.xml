@@ -9,7 +9,40 @@
        	http://www.springframework.org/schema/context        
        	http://www.springframework.org/schema/context/spring-context-3.0.xsd">
        	
+	<!-- 数据源realm -->
+	<bean id="myRealm" class="com.lhb.shiro.MyRelam"></bean>
 	
+	<!-- shiro 内置缓存 -->
+	<bean id="cacheManager" class="org.apache.shiro.cache.MemoryConstrainedCacheManager" />
+	
+	<!-- 安全管理器 -->
+	<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+		<property name="realm" ref="myRealm"></property>
+		<!-- <property name="cacheManager" ref="cacheManager" /> -->
+	</bean>
 
+	<!-- 表单过滤重写 -->
+	<bean id="loginFormAuthenticationFilter" class="com.lhb.shiro.LoginFormAuthenticationFilter"></bean>
 
+	<!-- shiro 过滤器 -->
+	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+		<property name="securityManager" ref="securityManager"></property>
+		<property name="loginUrl" value="/login.jsp"></property>
+		<property name="successUrl" value="/index.jsp"></property>
+		<property name="unauthorizedUrl" value="/unauthorized.jsp"></property>
+		<!-- 重写 表单过滤父类中的successUrl页面跳转 -->
+		<property name="filters">
+			<map>
+				<entry key="authc" value-ref="loginFormAuthenticationFilter"></entry>
+			</map>
+		</property>
+		<property name="filterChainDefinitions">
+			<value>
+				/spring/login = anon
+				/spring/logout = anon
+				/unauthorized.jsp = anon
+				/** = authc
+			</value>
+		</property>
+	</bean>
 </beans>       	
