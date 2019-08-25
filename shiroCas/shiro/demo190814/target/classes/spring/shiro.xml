@@ -9,20 +9,60 @@
        	http://www.springframework.org/schema/context        
        	http://www.springframework.org/schema/context/spring-context-3.0.xsd">
        	
-	<!-- 数据源realm -->
-	<bean id="myRealm" class="com.lhb.shiro.MyRelam"></bean>
+	<!-- 数据源realm 1-->
+	<bean id="myRealm" class="com.lhb.shiro.MyRelam">
+		<property name="credentialsMatcher">
+			<bean class="org.apache.shiro.authc.credential.HashedCredentialsMatcher">
+				<property name="hashAlgorithmName" value="MD5"></property>
+				<property name="hashIterations" value="1024" />
+				<property name="hashSalted" value="true"></property>
+			</bean>
+		</property>
+	</bean>
+	
+	<!-- 数据源2 -->
+	<bean id="secondRealm" class="com.lhb.shiro.SecondRealm">
+		<property name="credentialsMatcher">
+			<bean class="org.apache.shiro.authc.credential.HashedCredentialsMatcher">
+				<property name="hashAlgorithmName" value="SHA1"></property>
+				<property name="hashIterations" value="1024" />
+				<property name="hashSalted" value="true"></property>
+			</bean>
+		</property>
+	</bean>
+	
+	<!-- 【多realm配置方式一】配置多relam 管理类   该多realm的配置方式是给securityManager配置authenticator属性  -->
+	<!-- <bean id="authenticator" class="org.apache.shiro.authc.pam.ModularRealmAuthenticator">
+		<property name="realms">
+			<list>
+				<ref bean="myRealm"/>
+				<ref bean="secondRealm"/>
+			</list>
+		</property>
+		认证策略为：必须所有的realm都通过  才会认证成功  默认策略为：至少有一个成功  就认证成功
+		<property name="authenticationStrategy" >
+			<bean class="org.apache.shiro.authc.pam.AllSuccessfulStrategy"></bean>
+		</property>
+	</bean> -->
 	
 	<!-- shiro 内置缓存 -->
 	<bean id="cacheManager" class="org.apache.shiro.cache.MemoryConstrainedCacheManager" />
 	
 	<!-- 安全管理器 -->
 	<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
-		<property name="realm" ref="myRealm"></property>
+		<!-- 单realm格式 -->
+		<!-- <property name="realm" ref="myRealm"></property> -->
+		<!-- 【多realm的配置方式一】-->
+		<!-- <property name="authenticator" ref="authenticator"></property> -->
+		<!-- 【多realm的配置方式二】 -->
+		<property name="realms">
+			<list>
+				<ref bean="myRealm"/>
+				<ref bean="secondRealm"/>
+			</list>
+		</property>
 		<!-- <property name="cacheManager" ref="cacheManager" /> -->
 	</bean>
-
-	<!-- 表单过滤重写 -->
-	<bean id="loginFormAuthenticationFilter" class="com.lhb.shiro.LoginFormAuthenticationFilter"></bean>
 
 	<!-- shiro 过滤器 -->
 	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
@@ -32,17 +72,50 @@
 		<property name="unauthorizedUrl" value="/unauthorized.jsp"></property>
 		<!-- 重写 表单过滤父类中的successUrl页面跳转 -->
 		<property name="filters">
-			<map>
+			<util:map>
 				<entry key="authc" value-ref="loginFormAuthenticationFilter"></entry>
-			</map>
+			</util:map>
 		</property>
-		<property name="filterChainDefinitions">
+		
+		<!-- 使用实例工厂类  从程序内部获取过滤 -->
+		<property name="filterChainDefinitionMap" ref="filterChainDefinitionMap"></property>
+		
+		<!-- <property name="filterChainDefinitions">
 			<value>
 				/spring/login = anon
-				/spring/logout = anon
+				/spring/logout = logout
 				/unauthorized.jsp = anon
+				权限的匹配具有  优先匹配功能
+				/spring/music/* = authc,roles[user]
+				/spring/user/* = roles[admin]
 				/** = authc
 			</value>
-		</property>
+		</property> -->
 	</bean>
+	
+	<!-- filterChainDefinitionMap 实例类 -->
+	<bean id="filterChainDefinitionMap" factory-bean="filterChainDefinitionMapFatory" factory-method="getFilter"></bean>
+	
+	<!-- filterChainDefinitionMap  实例工厂类 -->
+	<bean id="filterChainDefinitionMapFatory" class="com.lhb.shiro.FilterFactory"></bean>
+	
+	<!-- 表单过滤重写 -->
+	<bean id="loginFormAuthenticationFilter" class="com.lhb.shiro.LoginFormAuthenticationFilter"></bean>
+	
+	<!--
+        1.配置lifecycleBeanPostProcessor，可以在Spring IOC容器中调用shiro的生命周期方法.
+    -->
+    <bean class="org.apache.shiro.spring.LifecycleBeanPostProcessor" id="lifecycleBeanPostProcessor" />
+
+    <!--
+        2.启用Spring IOC容器Shiro注解，但必须配置了lifecycleBeanPostProcessor后才可以使用
+    -->
+    <bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator" depends-on="lifecycleBeanPostProcessor" />
+
+    <!--
+        3.开启Spring AOC Shiro注解支持
+    -->
+    <bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+        <property name="securityManager" ref="securityManager"/>
+    </bean>
 </beans>       	

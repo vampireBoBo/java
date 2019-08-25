@@ -10,7 +10,7 @@ import org.apache.shiro.subject.Subject;
 import org.apache.shiro.web.filter.authc.FormAuthenticationFilter;
 
 /**
- * 用户登录成功后  successUrl跳转
+ * 用户登录成功后  successUrl跳转  ==== 这个过滤器没有生效 原因未明：好后期进行排查 LHB TODO
  * @author Administrator
  *
  */
@@ -31,6 +31,6 @@ public class LoginFormAuthenticationFilter extends FormAuthenticationFilter {
 	@Override
 	protected void issueSuccessRedirect(ServletRequest request, ServletResponse response) throws Exception {
 		log.error("进入表单过滤");
-		super.issueSuccessRedirect(request, response);
+		issueSuccessRedirect(request, response);
 	}
 }

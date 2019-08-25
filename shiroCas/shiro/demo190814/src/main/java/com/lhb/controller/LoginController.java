@@ -23,13 +23,11 @@ public class LoginController {
 	 * 登录
 	 * @return  返回结果值
 	 */
-	@ResponseBody
 	@GetMapping(value="/login")
 	public String login(HttpServletResponse rep,User user){
-		log.error("开始执行登录方法,请求参数为："+JSON.toJSONString(user));
 		UsernamePasswordToken token = new UsernamePasswordToken(user.getUsername(),user.getPassword());
 		SecurityUtils.getSubject().login(token);
 		log.error("用户登录成功");
-		return null;
+		return "redirect:index";
 	}
 }
