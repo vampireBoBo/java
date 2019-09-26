@@ -1,0 +1,7 @@
+1、eclipse官网  下载安装eclipse的安装工具类   
+	网址：https://www.eclipse.org/downloads/
+2、下载完毕 点击eclipse的安装工具，进入以后选择eclipse for java ee的版本 ，不要选择java se版本
+3、java ee版本eclipse安装完毕，进入help-install new software
+	输入连接：http://dist.springsource.com/release/TOOLS/update/e4.9/     【4.9：为当前eclipse的版本号】 点击回车  ---？选择带有idea的四项  并去掉下面的最后一个复选框，安装完毕重启即可
+
+学习连接：https://blog.csdn.net/weixin_30376323/article/details/94928591
