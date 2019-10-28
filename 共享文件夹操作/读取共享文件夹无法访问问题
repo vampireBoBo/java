@@ -1,0 +1,5 @@
+1、共享文件通过smb协议读取，注意事项：
+	共享文件开启无密码共享，通过cmd指令通过\\ip\fileName 是否可以无密码登录
+	浏览器的访问方式为：file://ip/fileName
+2、smb是的jar包版本会与共享文件夹所在服务器的smb协议有关，若出现smb拒绝连接的问题，则核实共享机器是否开启smb1协议，操作为：https://blog.csdn.net/huipers/article/details/78329417，检查：https://blog.csdn.net/u013092293/article/details/83753520
+
