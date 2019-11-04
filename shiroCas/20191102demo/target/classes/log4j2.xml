@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- status 表示日志输出的最低级别  即输出所设置级别及其以上级别的日志信息 级别为：all trace debug info warn error off -->
+<!--当设置为info时  打印的日志信息为：info warn error  -->
+<Configuration status="debug">
+    <Appenders>             
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %m%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="debug" additivity="false">
+            <AppenderRef ref="Console"/>
+        </Root>
+        
+        <!-- additivity="false" 通过该属性去掉spring的日志信息 --> 
+        <logger name="org.springframework" level="debug" additivity="false"></logger>
+	</Loggers>
+</Configuration>
