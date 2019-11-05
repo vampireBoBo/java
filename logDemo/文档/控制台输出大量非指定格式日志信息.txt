@@ -1,0 +1,30 @@
+1、现象  控制台大量输出此类日志   该日志并非内部log4j的自主配置格式
+	13:28:51.424 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'virtualmachineDao'
+	13:28:51.424 [main] DEBUG org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowiring by type from bean name 'virtualmachineService' to bean named 'virtualmachineDao'
+	13:28:51.424 [main] DEBUG org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected element of bean 'virtualmachineService': AutowiredFieldElement for private com.future.dao.BacklogDao com.future.service.impl.VirtualmachineServiceImpl.backlogDao
+	13:28:51.424 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'backlogDao'
+	13:28:51.424 [main] DEBUG org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowiring by type from bean name 'virtualmachineService' to bean named 'backlogDao'
+	13:28:51.424 [main] DEBUG org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected element of bean 'virtualmachineService': AutowiredFieldElement for private com.future.dao.FunctionalciDao com.future.service.impl.VirtualmachineServiceImpl.functionalciDao
+	13:28:51.425 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'functionalciDao'
+	13:28:51.425 [main] DEBUG org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowiring by type from bean name 'virtualmachineService' to bean named 'functionalciDao'
+	13:28:51.425 [main] DEBUG org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected element of bean 'virtualmachineService': AutowiredFieldElement for private com.future.bus.gateway.datacenter.CoOperationAPI com.future.service.impl.VirtualmachineServiceImpl.coOperationAPI
+	13:28:51.425 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory - Return
+	
+	
+2、解决方案
+	检索pom文件中是否有引入logback的依赖  若有则进行排除
+	<!-- bus 引入了logback  此处进行排除  避免控制台大量无用日志的输出 -->
+	<exclusions>
+		<exclusion>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+		</exclusion>
+		<exclusion>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-core</artifactId>
+		</exclusion>
+		<exclusion>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-access</artifactId>
+		</exclusion> 
+	</exclusions>
