@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- status属性是log4j2自身框架的日志级别 
+    monitorInterval自动检测配置文件的时间间隔（单位：秒），最小间隔为5秒。log4j 2检测到配置文件有变化，会重新配置自己。
+-->
+<Configuration status="info" monitorInterval="60">
+    
+
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %m%n" />
+        </Console>
+    </Appenders>
+
+    <Loggers>
+        <!-- 设置对打印sql语句的支持 -->
+        <logger name="java.sql" level="debug" additivity="false">
+            <appender-ref ref="Console"/>
+        </logger>
+
+        <!--过滤掉spring和mybatis的一些无用的DEBUG信息-->
+        <logger name="org.springframework" level="info"></logger>
+        <logger name="org.mybatis" level="info"></logger>
+
+        <!-- 第三方日志系统 -->
+        <logger name="org.springframework.core" level="info" additivity="true">
+        </logger>
+        <logger name="org.springframework.beans" level="info">
+        </logger>
+        <logger name="org.springframework.context" level="info">
+        </logger>
+        <logger name="org.springframework.web" level="info">
+        </logger>
+
+        
+        <!-- 这里定义的日志级别和每个appender定义的日志级共同起作用，取二者的交集 -->
+        <Root level="info">  
+            <AppenderRef ref="Console" />
+        </Root> 
+    </Loggers> 
+
+</Configuration>
