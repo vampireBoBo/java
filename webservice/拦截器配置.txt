@@ -1,0 +1,11 @@
+	xmlns:cxf="http://cxf.apache.org/core"
+	http://cxf.apache.org/core 
+	http://cxf.apache.org/schemas/core.xsd 
+	
+	
+	<bean id="InInterceptor" class="com.hotent.mini.ext.InInterceptor"></bean>
+ 	<cxf:bus>
+ 		<cxf:inInterceptors>
+			<ref bean="InInterceptor" />
+		</cxf:inInterceptors>
+ 	</cxf:bus>
