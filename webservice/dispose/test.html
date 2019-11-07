@@ -1,0 +1,81 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        流程id:<input id="procInstId">
+
+        <button onclick="getOne();"> 获取单个信息</button>
+        <button onclick="selectAll();"> 获取所有信息</button>
+
+    </body>
+    <script type="text/javascript" src="dispose_apply.json"></script>
+    <script  type="text/javascript">
+        var request;
+        
+        function getOne(){
+            request = getRequest();
+            if(request!=null){       
+                // 封裝数据  
+                var data = getDisposeData();
+                // 调用接口
+                doWebservice('http://127.0.0.1/demo/service/flowService','getOne','http://impl.service.ext.mini.hotent.com/','<arg0>'+data+'</arg0>');
+            } 
+        }
+       
+      
+        function selectAll(){
+            request = getRequest();
+            if(request!=null){       
+                // 封裝数据  
+                var data = getDisposeData();
+                // 调用接口
+                doWebservice('http://127.0.0.1/demo/service/ProcessService','selectAll','http://impl.webservice.bpmx.hotent.com/','<json>'+data+'</json>');
+            }
+        }
+
+        function doWebservice(url,method,namespace,data){
+            var xmldata = '<?xml version="1.0" encoding="utf-8"?>';
+                xmldata += '<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">';
+                xmldata += "    <soap:Body>";        
+                xmldata += '        <ns2:'+method+' xmlns:ns2="'+namespace+'">';  
+                xmldata +=              data;                           
+                xmldata += "        </ns2:"+method+">";                 
+                xmldata += "    </soap:Body>";            
+                xmldata += "</soap:Envelope>";  
+
+            request.onreadystatechange = function(){
+                if(request.readyState == 4 && request.status == 200){
+                    var domXML = request.responseXML;
+                    var result = domXML.getElementsByTagName("return")[0].innerHTML;
+                    alert('响应结果'+result);
+                }
+
+            }
+
+            request.open('POST',url);
+            request.send(xmldata);
+        }
+
+        // 共公用接口===参数封装
+        function getDisposeData(){
+            baseData.data = JSON.stringify(disposeData);
+            var data = JSON.stringify(baseData);
+            console.info('请求参数获取'+data);
+            return data;
+        }
+
+        // 共公用接口===创建XMLHttpRequest
+        function getRequest(){
+            var xmlHttp = null;
+            if (window.XMLHttpRequest){// code for IE7, Firefox, Opera, etc.
+                xmlHttp=new XMLHttpRequest();
+            }
+            else if (window.ActiveXObject)
+            {// code for IE6, IE5
+                xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            return xmlHttp;
+        }
+    </script>
+</html>

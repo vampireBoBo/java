@@ -1,0 +1,14 @@
+
+var baseData = {
+	"subject": "申请",
+	"flowKey": "apply",
+	"account": "2332"
+};
+
+var disposeData = {
+	"user": {
+		"support_orgLinkman": "",
+		"status": "5"
+	}
+}
+
