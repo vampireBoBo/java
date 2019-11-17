@@ -10,6 +10,10 @@
   <sql id="Base_Column_List">
     rid, rcode, rname, remark
   </sql>
+  <!-- 根据用户id 获取用户的角色 -->
+  <select id="selectRolesByUserId" parameterType="java.lang.String" resultType="java.util.Map">
+	select s_user.*,s_role.*  from s_user ,s_user_role,s_role where s_user.uid = s_user_role.uid and s_user_role.rid = s_role.rid and s_user.loginName =#{loginName}
+  </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />

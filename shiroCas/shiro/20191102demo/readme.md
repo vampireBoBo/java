@@ -46,3 +46,16 @@
 	
 六、集成shiro
 	
+	1.pom添加依赖  shiro-all shiro-spring 
+	
+	
+	报错
+	The security manager does not implement the WebSecurityManager interface.=====https://blog.csdn.net/loveyour_1314/article/details/79293857
+	
+	
+七、报错
+	
+	 According to TLD or attribute directive in tag file, attribute test does not accept any expressions====调整jsp中的jstl标签库为http://java.sun.com/jstl/core_rt 
+	 
+八、密码的生成策略
+	Md5 1024 盐值为登录名称的全大写  手动生成密码的方式在util中createCredential

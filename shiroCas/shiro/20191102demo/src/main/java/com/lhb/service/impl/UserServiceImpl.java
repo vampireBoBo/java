@@ -56,6 +56,13 @@ public class UserServiceImpl implements UserService{
 		log.error("userService 读取用户列表");
 		List<User> list = userMapper.selectListByParams();
 		log.error("用户查询结果："+JSON.toJSONString(list));
-		return null;
+		return list;
+	}
+
+	/**
+	 * 根据用户登录名称获取用户信息
+	 */
+	public User selectByLoginName(String loginName) {
+		return userMapper.selectByLoginName(loginName);
 	}
 }

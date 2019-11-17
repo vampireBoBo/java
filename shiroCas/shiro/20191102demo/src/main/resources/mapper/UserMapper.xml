@@ -18,6 +18,13 @@
     from s_user
     where uid = #{uid}
   </select>
+  <!--根据登录名称获取用户信息 -->
+  <select id="selectByLoginName" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from s_user
+    where loginName = #{loginName}
+  </select>
   <!-- 根据条件查找 -->
   <select id="selectListByParams" resultMap="BaseResultMap">
   	select 

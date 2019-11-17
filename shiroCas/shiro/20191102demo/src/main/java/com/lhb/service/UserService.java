@@ -19,4 +19,6 @@ public interface UserService {
     int updateByPrimaryKey(User record);
     
     List<User> selectListByParams ();
+    
+    User selectByLoginName(String loginName);
 }

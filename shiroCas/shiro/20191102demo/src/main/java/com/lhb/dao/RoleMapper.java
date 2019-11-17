@@ -1,5 +1,8 @@
 package com.lhb.dao;
 
+import java.util.List;
+import java.util.Map;
+
 import com.lhb.entity.Role;
 
 public interface RoleMapper {
@@ -14,4 +17,6 @@ public interface RoleMapper {
     int updateByPrimaryKeySelective(Role record);
 
     int updateByPrimaryKey(Role record);
+    
+    List<Map> selectRolesByUserId(String loginName);
 }
