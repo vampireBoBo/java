@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- 包扫描 -->
+	<!-- 1、因为当年项目集成了springmvc 故包的扫描交由springmvc去完成 子容器也会将父级容器一并进行扫描  
+		 2、 但如果是父级容器去扫描包，那在springmvc也需要开启包的扫描，因为父级容器无法操作子级容器的controller，这会导致在子容器在解析路径的时候 找不到对应的映射路径  
+		 3、如果父容器和子容器都开启了包的扫描  则需要在子容器的扫描中仅仅扫描controller包就可以，不然会导致service及dao层包的多次扫描 项目运行会出现异常-->
+	<!-- <context:component-scan base-package="com.lhb"></context:component-scan> -->
+
+</beans>
