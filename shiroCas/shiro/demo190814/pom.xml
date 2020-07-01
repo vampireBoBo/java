@@ -14,7 +14,7 @@
   	<springmvc.version>5.1.6.RELEASE</springmvc.version>
   	<servlet>3.1.0</servlet>
   	<jackson.version>1.9.13</jackson.version>
-  	<log4j.version>2.11.1</log4j.version>
+  	<log4j.version>2.13.3</log4j.version>
   	<org.apache.shiro.version>1.2.3</org.apache.shiro.version>
   </properties>
   
