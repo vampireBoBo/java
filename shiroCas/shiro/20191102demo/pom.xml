@@ -77,7 +77,7 @@
 	<dependency>
 	    <groupId>mysql</groupId>
 	    <artifactId>mysql-connector-java</artifactId>
-	    <version>5.1.30</version>
+	    <version>8.0.16</version>
 	</dependency>
 	<!-- https://mvnrepository.com/artifact/org.springframework/spring-tx -->
 	<!-- 若没有此依赖  项目在启动时报错：java.lang.NoClassDefFoundError: org/springframework/dao/support/DaoSupport -->
@@ -170,7 +170,7 @@
 		          <dependency>
 					    <groupId>mysql</groupId>
 					    <artifactId>mysql-connector-java</artifactId>
-					    <version>5.1.30</version>
+					    <version>8.0.16</version>
 				  </dependency>
 	        </dependencies>
 	    </plugin>
