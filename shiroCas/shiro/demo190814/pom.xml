@@ -15,7 +15,7 @@
   	<servlet>3.1.0</servlet>
   	<jackson.version>1.9.13</jackson.version>
   	<log4j.version>2.11.1</log4j.version>
-  	<org.apache.shiro.version>1.2.3</org.apache.shiro.version>
+  	<org.apache.shiro.version>1.7.1</org.apache.shiro.version>
   </properties>
   
   <dependencies>
